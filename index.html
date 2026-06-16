@@ -10,6 +10,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -45,7 +46,7 @@ aria-controls="nav"
   id="nav"
   aria-label="Menú principal"
 >
-    <a href="#inicio">Inicio</a> <a href="#servicios">Servicios</a> <a href="#beneficios">Beneficios</a> <a href="#contacto">Contacto</a> <a href="soporte/login.html" class="btn-admin"> Admin </a> <a href="soporte/usuario_login.html" class="btn-user"> Usuario </a>
+    <a href="#inicio">Inicio</a> <!--<a href="#servicios">Servicios</a>--> <a href="#beneficios">Beneficios</a> <a href="#contacto">Contacto</a> <a href="soporte/login.html" class="btn-admin"> Admin </a> <a href="soporte/usuario_login.html" class="btn-user"> Usuario </a>
   </nav>
 
 </header>
@@ -243,55 +244,6 @@ Contratar
   </a>
 
 </section>
-
-<style>
-
-.carousel-container{
-  overflow:hidden;
-  width:100%;
-  margin:30px 0 60px;
-}
-
-.carousel-track{
-  display:flex;
-  gap:25px;
-  width:max-content;
-  animation:scrollCarousel 35s linear infinite;
-}
-
-.carousel-track.reverse{
-  animation-direction:reverse;
-}
-
-.carousel-track:hover{
-  animation-play-state:paused;
-}
-
-@keyframes scrollCarousel{
-
-  0%{
-    transform:translateX(0);
-  }
-
-  100%{
-    transform:translateX(-50%);
-  }
-
-}
-
-.plan{
-  min-width:320px;
-}
-
-@media(max-width:768px){
-
-  .plan{
-    min-width:280px;
-  }
-
-}
-
-</style>
 
 <!-- =========================
      TESTIMONIOS
@@ -502,7 +454,7 @@ decoding="async"
           src="images/1.png" 
           alt="Optimización empresarial"
           loading="lazy"
-decoding="async"
+          decoding="async"
         >
       </div>
 
@@ -562,33 +514,83 @@ decoding="async"
 
 <!-- CONTACTO -->
 <section class="contacto" id="contacto">
-  <h2>Contáctanos</h2>
+  <section class="contacto" id="contacto">
 
-  <form id="contactForm">
-    <label for="nombre">Nombre completo</label>
-<input
-  type="text"
-  id="nombre"
-  name="nombre"
-  required
-  autocomplete="name"
->
-    <label for="correo">Correo electrónico</label>
-<input
-  type="email"
-  id="correo"
-  name="correo"
-  required
-  autocomplete="email"
->
-    <label for="mensaje">Mensaje</label>
-<textarea
-  id="mensaje"
-  name="mensaje"
-  required
-></textarea>
-    <button type="submit">Enviar</button>
-  </form>
+  <div class="contacto-container">
+
+```
+<div class="contacto-icon">
+  💬
+</div>
+
+<h2>Contáctanos</h2>
+
+<p class="contacto-sub">
+  Estamos listos para ayudarte a impulsar tu negocio con soluciones tecnológicas profesionales.
+</p>
+
+<form id="contactForm">
+
+  <div class="input-group">
+
+    <label for="nombre">
+      Nombre completo
+    </label>
+
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      required
+      autocomplete="name"
+      placeholder="Ingresa tu nombre"
+    >
+
+  </div>
+
+  <div class="input-group">
+
+    <label for="correo">
+      Correo electrónico
+    </label>
+
+    <input
+      type="email"
+      id="correo"
+      name="correo"
+      required
+      autocomplete="email"
+      placeholder="ejemplo@correo.com"
+    >
+
+  </div>
+
+  <div class="input-group">
+
+    <label for="mensaje">
+      Mensaje
+    </label>
+
+    <textarea
+      id="mensaje"
+      name="mensaje"
+      required
+      placeholder="Cuéntanos cómo podemos ayudarte..."
+    ></textarea>
+
+  </div>
+
+  <button type="submit">
+
+    🚀 Enviar Mensaje
+
+  </button>
+
+</form>
+```
+
+  </div>
+
 </section>
 
 </main>
@@ -599,21 +601,49 @@ decoding="async"
   <div class="footer-container">
 
     <!-- MARCA -->
-    <div class="footer-col">
-      <img src="images/logo.jpg" alt="">
-      <h2 class="logo-text">INNOVENT SERVICIOS TI</h2>
-      <p>Soluciones tecnológicas para empresas que no pueden detenerse.</p>
-    </div>
+    <div class="footer-col empresa">
+
+  <div class="footer-logo">
+
+    <img
+      src="images/logo.jpg"
+      alt="Innovent Servicios TI"
+      loading="lazy"
+      width="140px"
+    >
+
+  </div>
+
+  <h2 class="logo-text">
+    INNOVENT SERVICIOS TI
+  </h2>
+
+  <p class="footer-description">
+    Impulsamos empresas y emprendedores mediante
+    soluciones tecnológicas innovadoras,
+    soporte especializado, desarrollo web,
+    automatización y transformación digital.
+  </p><br>
+
+  <div class="footer-badges">
+
+    <span>🚀 Innovación</span>
+    <span>🔒 Seguridad</span>
+    <span>💻 Tecnología</span>
+
+  </div>
+
+</div>
 
     <!-- SERVICIOS -->
     <div class="footer-col">
-      <h3>Servicios</h3>
+      <!--<h3>Servicios</h3>
       <ul>
         <li>Soporte técnico</li>
         <li>Redes y servidores</li>
         <li>Seguridad informática</li>
         <li>Desarrollo de software</li>
-      </ul>
+      </ul>-->
     </div>
 
     <!-- REDES -->
@@ -655,7 +685,6 @@ decoding="async"
   </div>
 
 </footer>
-
 
 <!-- ASESOR VIRTUAL -
 
