@@ -105,17 +105,191 @@ aria-controls="nav"
   </div>
 </section>-->
 
-<!-- BENEFICIOS -->
+  <!-- BENEFICIOS -->
+
 <section class="beneficios" id="beneficios">
 
   <h2>¿Por qué Innovent?</h2>
 
   <div class="grid">
-    <div>✔ Respuesta rápida</div>
-    <div>✔ Planes mensuales</div>
-    <div>✔ Soporte continuo</div>
-    <div>✔ Atención personalizada</div>
+
+```
+<div class="beneficio-card">
+  ⚡ Respuesta rápida
+  <span>
+    Atención ágil para resolver incidencias y mantener tu operación funcionando sin interrupciones.
+  </span>
+</div>
+
+<div class="beneficio-card">
+  📅 Planes mensuales
+  <span>
+    Soluciones flexibles adaptadas a las necesidades y presupuesto de tu empresa.
+  </span>
+</div>
+
+<div class="beneficio-card">
+  🛠️ Soporte continuo
+  <span>
+    Monitoreo, mantenimiento y acompañamiento tecnológico permanente.
+  </span>
+</div>
+
+<div class="beneficio-card">
+  🤝 Atención personalizada
+  <span>
+    Cada cliente recibe una estrategia tecnológica diseñada para sus objetivos.
+  </span>
+</div>
+```
+
   </div>
+
+</section>
+
+<style>
+
+/* ==========================
+   BENEFICIOS INNOVENT
+========================== */
+
+.beneficios{
+
+  padding:100px 20px;
+
+  text-align:center;
+
+  background:
+  radial-gradient(circle at top left,#0c4a6e 0%,transparent 35%),
+  radial-gradient(circle at top right,#581c87 0%,transparent 35%),
+  #050b18;
+
+  overflow:hidden;
+}
+
+.beneficios h2{
+
+  color:#fff;
+
+  font-size:2.8rem;
+
+  font-weight:800;
+
+  margin-bottom:60px;
+
+  position:relative;
+}
+
+.beneficios h2::after{
+
+  content:'';
+
+  width:100px;
+  height:4px;
+
+  display:block;
+
+  margin:15px auto 0;
+
+  border-radius:50px;
+
+  background:
+  linear-gradient(
+  90deg,
+  #00d4ff,
+  #8b5cf6);
+}
+
+.grid{
+
+  max-width:1200px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:25px;
+}
+
+.beneficio-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+
+  padding:35px 25px;
+
+  border-radius:22px;
+
+  background:
+  rgba(255,255,255,.05);
+
+  backdrop-filter:blur(15px);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  color:#fff;
+
+  font-size:1.2rem;
+
+  font-weight:700;
+
+  transition:.4s ease;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.15);
+}
+
+.beneficio-card span{
+
+  color:#cbd5e1;
+
+  font-size:.95rem;
+
+  font-weight:400;
+
+  line-height:1.7;
+}
+
+.beneficio-card:hover{
+
+  transform:
+  translateY(-10px);
+
+  border-color:
+  rgba(0,212,255,.45);
+
+  box-shadow:
+  0 20px 45px rgba(0,212,255,.18);
+}
+
+@media(max-width:768px){
+
+  .beneficios{
+
+    padding:80px 15px;
+  }
+
+  .beneficios h2{
+
+    font-size:2rem;
+  }
+
+  .grid{
+
+    gap:20px;
+  }
+
+}
+
+</style>
+
 
 </section>
 
@@ -609,7 +783,6 @@ decoding="async"
       src="images/logo.jpg"
       alt="Innovent Servicios TI"
       loading="lazy"
-      width="140px"
     >
 
   </div>
