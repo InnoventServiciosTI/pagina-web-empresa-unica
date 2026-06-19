@@ -78,44 +78,100 @@ body{
 
 }
 
+/*==================================================
+                    LOGO
+==================================================*/
+
+/* Contenedor */
+
+.logo a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 15px;
+
+    border-radius:18px;
+
+    transition:.35s ease;
+
+}
+
+
+.logo a:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/*=========================================
+            LOGO EN TEXTO
+=========================================*/
+
 .logo{
-
-  display:flex;
-  align-items:center;
-  gap:15px;
-
-  margin-bottom:40px;
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.logo-icon{
-
-  width:50px;
-  height:50px;
-
-  border-radius:14px;
-
-  background:var(--primary);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:22px;
-
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    text-decoration:none;
+    line-height:1;
+    transition:.35s ease;
 }
 
-.logo h2{
-
-  font-size:22px;
-  margin-bottom:3px;
-
+.logo-title{
+    font-size:2rem;
+    font-weight:800;
+    letter-spacing:3px;
+    color:#ffffff;
+    text-transform:uppercase;
 }
 
-.logo span{
+.logo-subtitle{
+    margin-top:6px;
+    font-size:.85rem;
+    font-weight:600;
+    letter-spacing:6px;
+    color:#00d4ff;
+    text-transform:uppercase;
+}
 
-  opacity:.7;
-  font-size:13px;
+.logo-text:hover{
+    transform:scale(1.05);
+}
+
+.logo-text:hover .logo-title{
+    color:#00d4ff;
+}
+
+.logo-text:hover .logo-subtitle{
+    color:#b84cff;
+}
+
+.logo-text:focus-visible{
+    outline:2px solid #00d4ff;
+    outline-offset:6px;
+    border-radius:8px;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .logo-title{
+        font-size:1.6rem;
+    }
+
+    .logo-subtitle{
+        font-size:.75rem;
+        letter-spacing:4px;
+    }
 
 }
 
@@ -1139,30 +1195,6 @@ table tr:hover{
   animation-play-state:paused;
 }
 
-@keyframes scrollCarousel{
-
-  0%{
-    transform:translateX(0);
-  }
-
-  100%{
-    transform:translateX(-50%);
-  }
-
-}
-
-.plan{
-  min-width:320px;
-}
-
-@media(max-width:768px){
-
-  .plan{
-    min-width:280px;
-  }
-
-}
-
 .footer-col.empresa{
 
   text-align:center;
@@ -1472,34 +1504,8 @@ table tr:hover{
   1px solid rgba(255,255,255,.08);
 }
 
-/* Logo más pequeño */
-
-.logo img{
-
-  height:38px;
-
-  width:auto;
-
-  max-width:250px;
-
-  object-fit:contain;
-
-  display:block;
-}
-
-.logo img:hover{
-  transform:scale(1.05);
-}
-
 .header{
   padding:4px 20px;
-}
-
-.logo img{
-  height:42px;
-  max-width:240px;
-  width:auto;
-  object-fit:contain;
 }
 
 /* ==========================
